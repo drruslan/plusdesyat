@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<h1 id="score" style="font-size: 50px">10</h1>
+<img src="strelkavniz.png" width="150" onclick="down()">
+    <img src="strelkavverh.png" width="150" onclick="up()">
+</center>
+</body>
+<script>
+    i=10
+    timer1=undefined
+    function down() {
+        timer1=setInterval(function () {
+        i=i-1
+            document.getElementById('score').innerHTML=i
+       if (i==0)
+           clearInterval(timer1)
+        },500)
+
+    }
+    function up() {
+        timer1=setInterval(function () {
+          i=i+1
+          document.getElementById('score').innerHTML=i
+        if (i==20)
+            clearInterval(timer1)
+        },500)
+    }
+</script>
+</html>
